@@ -1,0 +1,15 @@
+[Unit]
+Description=Custom Postfix Policy Service
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/PATH-TO-POSTFIX-LIMITER/postfix_limiter.php
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
+
+
